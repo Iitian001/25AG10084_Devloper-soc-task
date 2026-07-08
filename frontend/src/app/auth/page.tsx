@@ -67,12 +67,12 @@ export default function AuthPage() {
         animate={{ opacity: 1, y: 0 }}
         className="w-full max-w-md"
       >
-        <div className="neo-card p-10 bg-yellow-400">
+        <div className="neo-card p-6 sm:p-10 bg-yellow-400">
           <div className="text-center mb-8 relative z-10">
             <div className="mx-auto w-16 h-16 bg-white neo-border flex items-center justify-center shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] mb-6">
               <Megaphone className="text-black" size={32} />
             </div>
-            <h1 className="text-4xl font-black text-black mb-2 uppercase tracking-tighter leading-none">
+            <h1 className="text-3xl sm:text-4xl font-black text-black mb-2 uppercase tracking-tighter leading-none">
               {isLogin ? "Welcome Back" : "Join Connect"}
             </h1>
             <p className="text-black font-bold mt-4 uppercase border-t-[3px] border-black pt-4">

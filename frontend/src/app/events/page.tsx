@@ -54,10 +54,10 @@ export default function EventsFeed() {
   return (
     <div className="space-y-10 pb-10">
       {/* Neo-Brutalism Header */}
-      <div className="neo-border neo-shadow bg-pink-400 p-8 sm:p-12 relative overflow-hidden">
-        <div className="relative z-10 flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
+      <div className="neo-border neo-shadow bg-pink-400 p-6 sm:p-12 relative overflow-hidden">
+        <div className="relative z-10 flex flex-col md:flex-row justify-between items-start md:items-center gap-6 md:gap-8">
           <div>
-            <h1 className="text-5xl sm:text-7xl font-black text-black mb-2 tracking-tighter uppercase leading-none">
+            <h1 className="text-4xl sm:text-6xl md:text-7xl font-black text-black mb-2 tracking-tighter uppercase leading-none">
               CAMPUS EVENTS.
             </h1>
             <p className="text-black font-bold text-lg max-w-md uppercase tracking-wide border-l-4 border-black pl-3 mt-4">

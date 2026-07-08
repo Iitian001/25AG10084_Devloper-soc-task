@@ -57,38 +57,41 @@ export default function RootLayout({
                 <div className="bg-white p-1 border-2 border-transparent group-hover:border-white transition-all rounded-full overflow-hidden flex items-center justify-center">
                   <img src="/logo.svg" alt="IIT KGP Logo" className="h-8 w-8 object-contain" />
                 </div>
-                <span className="text-white">Campus<span className="text-yellow-400">Connect</span></span>
+                <span className="hidden sm:inline text-white">Campus<span className="text-yellow-400">Connect</span></span>
               </Link>
               
               <div className="flex items-center gap-1.5 sm:gap-4 md:gap-6 text-[10px] sm:text-sm font-bold uppercase tracking-wider">
                 {/* Navigation Links */}
-                <Link href="/" className={`flex items-center gap-2 transition-all px-3 py-1.5 border-[3px] ${pathname === '/' ? 'bg-cyan-400 text-black border-black shadow-[4px_4px_0px_0px_rgba(255,255,255,1)]' : 'text-white border-transparent hover:border-white'}`}>
-                   <span className="hidden sm:inline">Dashboard</span>
+                <Link href="/" className={`flex items-center gap-2 transition-all p-2 sm:px-3 sm:py-1.5 border-[3px] ${pathname === '/' ? 'bg-cyan-400 text-black border-black shadow-[4px_4px_0px_0px_rgba(255,255,255,1)]' : 'text-white border-transparent hover:border-white'}`}>
+                  <Home size={18} className="sm:hidden" />
+                  <span className="hidden sm:inline">Dashboard</span>
                 </Link>
-                <Link href="/events" className={`flex items-center gap-2 transition-all px-3 py-1.5 border-[3px] ${pathname === '/events' ? 'bg-pink-400 text-black border-black shadow-[4px_4px_0px_0px_rgba(255,255,255,1)]' : 'text-white border-transparent hover:border-white'}`}>
-                   <span className="hidden sm:inline">Events</span>
+                <Link href="/events" className={`flex items-center gap-2 transition-all p-2 sm:px-3 sm:py-1.5 border-[3px] ${pathname === '/events' ? 'bg-pink-400 text-black border-black shadow-[4px_4px_0px_0px_rgba(255,255,255,1)]' : 'text-white border-transparent hover:border-white'}`}>
+                  <Calendar size={18} className="sm:hidden" />
+                  <span className="hidden sm:inline">Events</span>
                 </Link>
                 
                 {/* Admin Only Post Button */}
                 {isAdmin && (
-                  <Link href="/create" className={`flex items-center gap-2 transition-all px-4 py-1.5 border-[3px] ${pathname === '/create' ? 'bg-yellow-400 text-black border-black shadow-[4px_4px_0px_0px_rgba(255,255,255,1)]' : 'bg-white text-black border-black shadow-[4px_4px_0px_0px_rgba(255,255,255,1)] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)]'}`}>
-                    <PlusCircle size={16} /> Post
+                  <Link href="/create" className={`flex items-center gap-2 transition-all p-2 sm:px-4 sm:py-1.5 border-[3px] ${pathname === '/create' ? 'bg-yellow-400 text-black border-black shadow-[4px_4px_0px_0px_rgba(255,255,255,1)]' : 'bg-white text-black border-black shadow-[4px_4px_0px_0px_rgba(255,255,255,1)] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)]'}`}>
+                    <PlusCircle size={16} /> <span className="hidden sm:inline">Post</span>
                   </Link>
                 )}
 
-                <div className="h-8 w-1 bg-white mx-2"></div>
+                <div className="h-6 sm:h-8 w-1 bg-white mx-1 sm:mx-2"></div>
 
                 {session ? (
-                  <div className="flex items-center gap-5">
+                  <div className="flex items-center gap-2 sm:gap-5">
                     <span className="hidden md:flex items-center gap-2 text-white bg-black border-2 border-white px-3 py-1">
                       <User size={14} /> {session.user.email?.split('@')[0]}
                     </span>
-                    <button onClick={handleLogout} className="flex items-center gap-2 text-white border-b-4 border-red-500 hover:bg-red-500 hover:text-black transition-colors px-2 py-1">
+                    <button onClick={handleLogout} className="flex items-center gap-2 text-white border-b-[3px] sm:border-b-4 border-red-500 hover:bg-red-500 hover:text-black transition-colors p-1 sm:px-2 sm:py-1">
+                      <LogOut size={16} className="sm:hidden" />
                       <span className="hidden sm:inline">Logout</span>
                     </button>
                   </div>
                 ) : (
-                  <Link href="/auth" className="flex items-center gap-2 bg-white text-black border-[3px] border-black shadow-[4px_4px_0px_0px_rgba(255,255,255,1)] px-5 py-2 hover:bg-cyan-400 hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] transition-all">
+                  <Link href="/auth" className="flex items-center gap-2 bg-white text-black border-[3px] border-black shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] sm:shadow-[4px_4px_0px_0px_rgba(255,255,255,1)] p-2 sm:px-5 sm:py-2 hover:bg-cyan-400 transition-all">
                     <LogIn size={16} /> <span className="hidden sm:inline">Login</span>
                   </Link>
                 )}

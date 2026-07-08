@@ -100,15 +100,15 @@ export default function CreatePost() {
       animate={{ opacity: 1, y: 0 }}
       className="max-w-3xl mx-auto"
     >
-      <div className="neo-card p-8 sm:p-12 bg-white">
+      <div className="neo-card p-6 sm:p-12 bg-white">
         <div className="relative z-10">
           <div className="text-center mb-10">
-            <h1 className="text-5xl font-black mb-3 text-black tracking-tighter uppercase">CREATE <span className="text-pink-500 underline decoration-[6px]">POST</span></h1>
+            <h1 className="text-4xl sm:text-5xl font-black mb-3 text-black tracking-tighter uppercase">CREATE <span className="text-pink-500 underline decoration-[6px]">POST</span></h1>
             <p className="text-black font-bold text-lg uppercase">Share an announcement or organize an event.</p>
           </div>
 
           {/* Neo-Brutalism Tab Switcher */}
-          <div className="flex gap-4 mb-10">
+          <div className="flex flex-col sm:flex-row gap-4 mb-10">
             <button 
               type="button"
               className={`flex-1 flex justify-center items-center gap-2 py-4 text-xl font-black uppercase tracking-widest border-[3px] border-black transition-all ${activeTab === 'notice' ? 'bg-cyan-400 text-black shadow-none translate-x-[4px] translate-y-[4px]' : 'bg-white text-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:bg-cyan-400 hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]'}`}
