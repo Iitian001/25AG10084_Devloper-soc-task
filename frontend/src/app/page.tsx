@@ -67,10 +67,10 @@ export default function Dashboard() {
       <div className="neo-border neo-shadow bg-yellow-400 p-8 sm:p-12 relative overflow-hidden">
         <div className="relative z-10 flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
           <div>
-            <div className="inline-flex items-center gap-2 px-3 py-1 bg-white border-[3px] border-black text-sm font-bold uppercase tracking-wider text-black mb-6 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
+            <div className="inline-flex items-center gap-2 px-3 py-1 bg-white border-[3px] border-black text-xs sm:text-sm font-bold uppercase tracking-wider text-black mb-6 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
               <Sparkles size={14} /> Welcome to the new era
             </div>
-            <h1 className="text-5xl sm:text-7xl font-black text-black mb-4 tracking-tighter uppercase leading-none">
+            <h1 className="text-4xl sm:text-6xl md:text-7xl font-black text-black mb-4 tracking-tighter uppercase leading-none">
               STAY CONNECTED.
             </h1>
             <p className="text-black font-bold text-lg max-w-md uppercase tracking-wide">
@@ -109,10 +109,10 @@ export default function Dashboard() {
           {/* Notices Column */}
           <section>
             <div className="flex items-center gap-4 mb-8">
-              <div className="p-3 bg-pink-400 neo-border neo-shadow">
+              <div className="p-2 sm:p-3 bg-pink-400 neo-border neo-shadow">
                 <Megaphone size={24} className="text-black" />
               </div>
-              <h2 className="text-4xl font-black text-black tracking-tighter uppercase">Latest Notices</h2>
+              <h2 className="text-3xl md:text-4xl font-black text-black tracking-tighter uppercase">Latest Notices</h2>
               <span className="ml-auto bg-white neo-border px-3 py-1 text-black font-bold text-xl">{filteredNotices.length}</span>
             </div>
             
@@ -161,10 +161,10 @@ export default function Dashboard() {
           {/* Events Column */}
           <section>
             <div className="flex items-center gap-4 mb-8">
-              <div className="p-3 bg-cyan-400 neo-border neo-shadow">
+              <div className="p-2 sm:p-3 bg-cyan-400 neo-border neo-shadow">
                 <Calendar size={24} className="text-black" />
               </div>
-              <h2 className="text-4xl font-black text-black tracking-tighter uppercase">Upcoming Events</h2>
+              <h2 className="text-3xl md:text-4xl font-black text-black tracking-tighter uppercase">Upcoming Events</h2>
               <span className="ml-auto bg-white neo-border px-3 py-1 text-black font-bold text-xl">{filteredEvents.length}</span>
             </div>
             

@@ -60,7 +60,7 @@ export default function RootLayout({
                 <span className="text-white">Campus<span className="text-yellow-400">Connect</span></span>
               </Link>
               
-              <div className="flex items-center gap-4 sm:gap-6 text-sm font-bold uppercase tracking-wider">
+              <div className="flex items-center gap-1.5 sm:gap-4 md:gap-6 text-[10px] sm:text-sm font-bold uppercase tracking-wider">
                 {/* Navigation Links */}
                 <Link href="/" className={`flex items-center gap-2 transition-all px-3 py-1.5 border-[3px] ${pathname === '/' ? 'bg-cyan-400 text-black border-black shadow-[4px_4px_0px_0px_rgba(255,255,255,1)]' : 'text-white border-transparent hover:border-white'}`}>
                    <span className="hidden sm:inline">Dashboard</span>
