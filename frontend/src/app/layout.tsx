@@ -40,7 +40,7 @@ export default function RootLayout({
     router.refresh();
   };
 
-  const isAdmin = session?.user?.email === "shreyash506@gmail.com";
+  const isAdmin = session?.user?.email === "iitianshreyash01@gmail.com";
 
   return (
     <html lang="en">

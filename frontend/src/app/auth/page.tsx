@@ -23,7 +23,7 @@ export default function AuthPage() {
 
     // Validation for Signup
     if (!isLogin) {
-      const isAdmin = email.toLowerCase() === "shreyash506@gmail.com";
+      const isAdmin = email.toLowerCase() === "iitianshreyash01@gmail.com";
       const isIIT = email.toLowerCase().endsWith("@kgpian.iitkgp.ac.in");
       
       if (!isAdmin && !isIIT) {
