@@ -105,7 +105,7 @@ export default function RootLayout({
         </main>
         
         <footer className="border-t-[6px] border-black py-8 text-center text-sm text-black font-bold bg-white mt-auto relative z-10">
-          <p>© {new Date().getFullYear()} DEVELOPERS' SOCIETY. DESIGNED FOR EXCELLENCE.</p>
+          <p>© {new Date().getFullYear()} SHREYASH</p>
         </footer>
       </body>
     </html>
