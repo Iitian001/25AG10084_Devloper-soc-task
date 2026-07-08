@@ -58,9 +58,9 @@ export default function NoticeDetail() {
       
       <article className="neo-card overflow-hidden bg-white">
         {notice.image_url && (
-          <div className="w-full h-72 sm:h-96 relative overflow-hidden border-b-[3px] border-black">
+          <div className="w-full relative border-b-[3px] border-black bg-zinc-100">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={notice.image_url} alt={notice.title} className="w-full h-full object-cover" />
+            <img src={notice.image_url} alt={notice.title} className="w-full max-h-[600px] object-contain" />
           </div>
         )}
         
