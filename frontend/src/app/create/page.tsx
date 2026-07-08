@@ -68,7 +68,7 @@ export default function CreatePost() {
     try {
       const endpoint = activeTab === "notice" ? "/notices" : "/events";
       
-      const res = await fetch(`http://localhost:8888/api${endpoint}`, {
+      const res = await fetch(`https://two5ag10084-devloper-soc-task.onrender.com/api${endpoint}`, {
         method: "POST",
         body: formData,
       });

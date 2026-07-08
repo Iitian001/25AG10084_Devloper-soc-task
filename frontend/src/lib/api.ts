@@ -1,4 +1,4 @@
-export const API_BASE_URL = 'http://localhost:8888/api';
+export const API_BASE_URL = 'https://two5ag10084-devloper-soc-task.onrender.com/api';
 
 export async function fetcher(endpoint: string, options: RequestInit = {}) {
   const res = await fetch(`${API_BASE_URL}${endpoint}`, {
