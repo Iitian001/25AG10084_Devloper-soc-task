@@ -196,35 +196,35 @@ export default function Dashboard() {
                       </div>
                       
                       <div className="grid grid-cols-2 gap-4 mb-6">
-                        <div className="flex items-start gap-3">
-                          <div className="p-2 bg-yellow-400 neo-border">
+                        <div className="flex items-start gap-3 min-w-0">
+                          <div className="p-2 bg-yellow-400 neo-border shrink-0">
                             <Calendar size={20} className="text-black" />
                           </div>
-                          <div>
+                          <div className="min-w-0 flex-1">
                             <p className="text-xs font-black text-black uppercase tracking-widest mb-0.5">Date</p>
-                            <p className="text-sm font-bold text-black border-b-2 border-black inline-block">{format(new Date(event.start_time), 'EEE, MMM d')}</p>
+                            <p className="text-sm font-bold text-black border-b-2 border-black inline-block truncate max-w-full">{format(new Date(event.start_time), 'EEE, MMM d')}</p>
                           </div>
                         </div>
                         
-                        <div className="flex items-start gap-3">
-                          <div className="p-2 bg-pink-400 neo-border">
+                        <div className="flex items-start gap-3 min-w-0">
+                          <div className="p-2 bg-pink-400 neo-border shrink-0">
                             <MapPin size={20} className="text-black" />
                           </div>
-                          <div>
+                          <div className="min-w-0 flex-1">
                             <p className="text-xs font-black text-black uppercase tracking-widest mb-0.5">Location</p>
                             <p className="text-sm font-bold text-black truncate">{event.venue}</p>
                           </div>
                         </div>
                       </div>
 
-                      <div className="grid grid-cols-2 gap-4 text-sm mb-6 pb-6 border-b-[3px] border-black">
-                        <div>
+                      <div className="grid grid-cols-2 gap-4 text-sm mb-6 pb-6 border-b-[3px] border-black min-w-0">
+                        <div className="min-w-0">
                           <p className="text-xs font-black text-black uppercase tracking-widest mb-1 flex items-center gap-1"><Calendar size={14}/> Time</p>
-                          <p className="font-bold text-black">{format(new Date(event.start_time), 'h:mm a')}</p>
+                          <p className="font-bold text-black truncate">{format(new Date(event.start_time), 'h:mm a')}</p>
                         </div>
-                        <div>
+                        <div className="min-w-0">
                           <p className="text-xs font-black text-black uppercase tracking-widest mb-1 flex items-center gap-1"><AlertCircle size={14}/> Organizer</p>
-                          <p className="font-bold text-black truncate bg-white px-2 py-1 neo-border shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] inline-block mt-1">{event.organizer}</p>
+                          <p className="font-bold text-black truncate bg-white px-2 py-1 neo-border shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] inline-block mt-1 max-w-full">{event.organizer}</p>
                         </div>
                       </div>
                       
