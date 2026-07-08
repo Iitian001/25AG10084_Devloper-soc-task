@@ -50,40 +50,36 @@ export default function NoticeDetail() {
     <motion.div 
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      className="max-w-4xl mx-auto space-y-6"
+      className="max-w-4xl mx-auto space-y-6 pb-20"
     >
-      <Link href="/" className="inline-flex items-center text-sm font-medium text-gray-400 hover:text-white transition-colors bg-white/5 hover:bg-white/10 px-4 py-2 rounded-full border border-white/10 backdrop-blur-md">
-        <ArrowLeft size={16} className="mr-2" /> Back to Feed
+      <Link href="/" className="inline-flex items-center text-sm font-black text-black hover:bg-yellow-400 transition-colors bg-white px-4 py-2 border-[3px] border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] uppercase tracking-wider">
+        <ArrowLeft size={16} className="mr-2" /> Back to Dashboard
       </Link>
       
-      <article className="glass rounded-[2rem] overflow-hidden shadow-2xl relative">
-        {/* Glow behind article */}
-        <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500/10 rounded-full blur-[100px] pointer-events-none"></div>
-
+      <article className="neo-card overflow-hidden bg-white">
         {notice.image_url && (
-          <div className="w-full h-72 sm:h-96 relative overflow-hidden bg-black">
+          <div className="w-full h-72 sm:h-96 relative overflow-hidden border-b-[3px] border-black">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={notice.image_url} alt={notice.title} className="w-full h-full object-cover opacity-80" />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+            <img src={notice.image_url} alt={notice.title} className="w-full h-full object-cover" />
           </div>
         )}
         
-        <div className={`p-8 sm:p-12 relative z-10 ${notice.image_url ? '-mt-24' : ''}`}>
-          <div className="flex flex-wrap gap-4 items-center mb-6 text-sm text-gray-300">
-            <span className="flex items-center gap-1.5 font-bold text-blue-300 bg-blue-500/20 border border-blue-500/30 px-3 py-1.5 rounded-md uppercase tracking-wider shadow-[0_0_10px_rgba(59,130,246,0.2)]">
+        <div className="p-6 sm:p-12">
+          <div className="flex flex-wrap gap-4 items-center mb-8 text-sm text-black font-bold uppercase">
+            <span className="flex items-center gap-1.5 bg-cyan-400 border-[3px] border-black px-3 py-1.5 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
               <Tag size={14} /> {notice.category}
             </span>
-            <span className="flex items-center gap-1.5 bg-white/5 border border-white/10 px-3 py-1.5 rounded-md font-medium">
-              <Calendar size={14} className="text-blue-400" /> {format(new Date(notice.created_at), 'MMMM d, yyyy')}
+            <span className="flex items-center gap-1.5 bg-yellow-400 border-[3px] border-black px-3 py-1.5 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+              <Calendar size={14} /> {format(new Date(notice.created_at), 'MMMM d, yyyy')}
             </span>
-            <span className="flex items-center gap-1.5 bg-white/5 border border-white/10 px-3 py-1.5 rounded-md font-medium">
-              <User size={14} className="text-blue-400" /> {notice.posted_by?.name || "Admin"}
+            <span className="flex items-center gap-1.5 bg-pink-400 border-[3px] border-black px-3 py-1.5 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+              <User size={14} /> {notice.posted_by?.name || "Admin"}
             </span>
           </div>
           
-          <h1 className="text-4xl sm:text-5xl font-extrabold mb-8 text-white tracking-tight drop-shadow-md">{notice.title}</h1>
+          <h1 className="text-4xl sm:text-6xl font-black mb-10 text-black tracking-tighter uppercase leading-none">{notice.title}</h1>
           
-          <div className="prose prose-lg dark:prose-invert max-w-none text-gray-300 whitespace-pre-wrap leading-relaxed font-medium">
+          <div className="text-black text-lg font-medium whitespace-pre-wrap leading-relaxed border-t-[3px] border-black pt-8">
             {notice.content}
           </div>
         </div>
