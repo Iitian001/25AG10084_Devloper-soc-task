@@ -22,7 +22,7 @@ export default function CreatePost() {
   useEffect(() => {
     async function checkAuth() {
       const { data: { session } } = await supabase.auth.getSession();
-      if (session?.user?.email === "shreyash506@gmail.com") {
+      if (session?.user?.email === "iitianshreyash01@gmail.com") {
         setIsAdmin(true);
         // Also fetch our dummy users table just in case we need the specific backend ID
         try {
@@ -43,10 +43,10 @@ export default function CreatePost() {
 
   if (!isAdmin) {
     return (
-      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="flex flex-col items-center justify-center py-32 text-red-400 glass rounded-3xl mt-10 max-w-2xl mx-auto">
-        <AlertCircle size={48} className="mb-4 text-red-500 drop-shadow-[0_0_15px_rgba(239,68,68,0.5)]" />
-        <h2 className="text-2xl font-semibold mb-2">Access Denied</h2>
-        <p className="text-gray-400 text-center max-w-md">You do not have permission to access the creation dashboard. Only administrators are allowed to post notices and events.</p>
+      <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="flex flex-col items-center justify-center py-20 neo-card bg-pink-400 mt-10 max-w-2xl mx-auto">
+        <AlertCircle size={64} className="mb-6 text-black" />
+        <h2 className="text-4xl font-black mb-4 uppercase tracking-tighter text-black">Access Denied</h2>
+        <p className="text-black font-bold text-center max-w-md bg-white p-4 neo-border shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">You do not have permission to access the creation dashboard. Only administrators are allowed to post notices and events.</p>
       </motion.div>
     );
   }
